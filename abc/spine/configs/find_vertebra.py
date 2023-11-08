@@ -9,7 +9,7 @@ from monailabel.interfaces.tasks.infer_v2 import InferTask
 from monailabel.interfaces.tasks.train import TrainTask
 from monailabel.utils.others.generic import download_file, strtobool
 
-from abc_toolkit.stk.spine.engines.vertebra_finder import VertebraFinder
+from abcCore.abc.spine.engines.vertebra_finder import VertebraFinder
 
 logger = logging.getLogger(__name__)
 

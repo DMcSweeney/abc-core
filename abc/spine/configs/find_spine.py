@@ -10,7 +10,7 @@ from monailabel.interfaces.config import TaskConfig
 from monailabel.interfaces.tasks.infer_v2 import InferTask
 from monailabel.interfaces.tasks.train import TrainTask
 
-from abc_toolkit.stk.spine.engines.spine_finder import SpineFinder
+from abcCore.abc.spine.engines.spine_finder import SpineFinder
 
 
 logger = logging.getLogger(__name__)

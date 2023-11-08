@@ -14,7 +14,7 @@ import polars as pl
 
 import pathos.multiprocessing as mp
 
-from ..mixin import dotdict
+from .mixin import dotdict
 
 logger = logging.getLogger(__name__)
 

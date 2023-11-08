@@ -22,7 +22,7 @@ from monailabel.interfaces.tasks.infer_v2 import InferType
 from monailabel.tasks.infer.basic_infer import BasicInferTask
 from monailabel.transform.post import Restored
 
-from abc_toolkit.stk.spine.transforms import CacheObjectd, VertebraLocalizationSegmentation, Resampled
+from abcCore.abc.spine.transforms import CacheObjectd, VertebraLocalizationSegmentation, Resampled
 
 
 class VertebraFinder(BasicInferTask):

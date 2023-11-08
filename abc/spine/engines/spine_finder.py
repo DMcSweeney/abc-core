@@ -4,7 +4,7 @@ import logging
 from typing import Callable, Sequence, Dict, Tuple, Any, Union
 from enum import Enum
 
-from abc_toolkit.stk.spine.transforms import CacheObjectd, BinaryMaskd
+from abcCore.abc.spine.transforms import CacheObjectd, BinaryMaskd
 
 from monailabel.transform.post import Restored
 from monailabel.interfaces.tasks.infer_v2 import InferType

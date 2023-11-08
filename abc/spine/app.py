@@ -22,8 +22,8 @@ from monailabel.interfaces.exception import MONAILabelError, MONAILabelException
 from monailabel.utils.others.generic import file_ext, device_list, handle_torch_linalg_multithread
 
 
-import abc.spine.configs
-from abc.spine.engines.vertebra_pipeline import InferVertebraPipeline
+import abcCore.abc.spine.configs
+from abcCore.abc.spine.engines.vertebra_pipeline import InferVertebraPipeline
 
 logger = logging.getLogger(__name__)
 
@@ -32,7 +32,7 @@ class spineApp(MONAILabelApp):
         self.model_dir = os.path.join(app_dir, "model")
         
         configs = {}
-        for c in get_class_names(abc_toolkit.stk.spine.configs, "TaskConfig"):
+        for c in get_class_names(abcCore.abc.spine.configs, "TaskConfig"):
             name = c.split(".")[-2].lower()
             configs[name] = c
 
