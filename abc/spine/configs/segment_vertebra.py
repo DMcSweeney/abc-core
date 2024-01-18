@@ -58,7 +58,7 @@ class segment_vertebra(TaskConfig):
         if not os.path.isfile(self.path):
             logger.error("No model file detected!! - aborting")
             raise FileNotFoundError(f"No model file detected - check that the following exists: {self.path}")
-
+        logger.info(f"--------------------- PATH-TO-MODEL ----------------------------- {os.path.abspath(self.path)}")
         self.target_spacing = (1.0, 1.0, 1.0)  # target space for image
         #self.target_spacing = (2, 2, 2) 
         self.roi_size = (128, 128, 96)

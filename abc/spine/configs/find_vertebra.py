@@ -60,7 +60,7 @@ class find_vertebrae(TaskConfig):
         if not os.path.isfile(self.path):
             logger.error("No model file detected!! - aborting")
             raise FileNotFoundError(f"No model file detected - check that the following exists: {self.path}")
-
+        logger.info(f"--------------------- PATH-TO-MODEL ----------------------------- {os.path.abspath(self.path)}")
         self.target_spacing = (1.3, 1.3, 1.3)  # target space for image
         #self.target_spacing = (1.6, 1.6, 1.6)
         #self.target_spacing = (2, 2, 2) 

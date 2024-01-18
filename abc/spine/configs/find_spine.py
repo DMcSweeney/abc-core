@@ -54,13 +54,14 @@ class find_spine(TaskConfig):
 
         # Download PreTrained Model
         if self.strtobool(self.conf.get("use_pretrained_model", "true")):
-            self.path = "./models/spine/radiology_segmentation_segresnet_localization_spine.pt"
+            self.path = "./models/spine/radiology_segmentation_segresnet_localization_spine.pt"    
 
         #!! Check if model is actually loaded
         if not os.path.isfile(self.path):
             logger.error("No model file detected!! - aborting")
             raise FileNotFoundError(f"No model file detected - check that the following exists: {self.path}")
 
+        logger.info(f"--------------------- PATH-TO-MODEL ----------------------------- {os.path.abspath(self.path)}")
         #self.target_spacing = (1.3, 1.3, 1.3)  # target space for image
         self.target_spacing = (2, 2, 2)  # target space for image
         # Setting ROI size should consider max width, height and depth of the images
